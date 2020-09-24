@@ -1,0 +1,25 @@
+
+
+login:
+  - id: 1
+    test_case_info:
+      name: "使用翼课号和密码正常登录"
+      content: "使用正确的翼课号和密码登录成功"
+    test_case_data:
+      url: https://mapi.ekwing.com/student/User/login
+      method: post
+      header: ""
+      data:
+        v: "3.6"
+        osv: "6.0.1"
+        deviceToken: "B8:37:65:26:BA:1B"
+        driverType: "OPPOR9s"
+        client: "student"
+        os: "Android"
+        driverCode: "3.8.9"
+        password: "f379eaf3c831b04de153469d1bec345e"
+        username: "10278456"
+        is_http: "1"
+      expected:
+        status_code: 200
+        msg: "登录成功"

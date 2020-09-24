@@ -1,0 +1,36 @@
+base_variable:
+  # 此处定义每个接口的基础变量
+  v: "3.6"
+  osv: "6.0.1"
+  deviceToken: "B8:37:65:26:BA:1B"
+  driverType: "OPPOR9s"
+  client: "student"
+  os: "Android"
+  driverCode: "3.8.9"
+  is_http: "1"
+
+获取央管ticket:
+  url: "http://system.eduyun.cn/bmp-web/npss/debugTool/createTicket"
+  method: "post"
+  data:
+    account: "dGVzdF9hY2NvdW50"
+    password: "MTIzNDU2"
+
+
+翼课号登录:
+#  url: "https://172.17.20.30/student/User/login"
+  url: "https://mapi.ekwing.com:443/student/User/login"
+  method: "post"
+  header:
+    Host: "mapi.ekwing.com"
+  data:
+#    v: "3.6"
+#    osv: "6.0.1"
+#    deviceToken: "B8:37:65:26:BA:1B"
+#    driverType: "OPPOR9s"
+#    client: "student"
+#    os: "Android"
+#    driverCode: "3.8.9"
+    password: "f379eaf3c831b04de153469d1bec345e"
+    username: "10278456"
+#    is_http: "1"

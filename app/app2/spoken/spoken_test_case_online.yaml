@@ -1,0 +1,500 @@
+base_variable:
+  # 此处定义每个接口的基础变量
+  v: "3.7"
+  osv: "10"
+  deviceToken: "7A:72:DE:35:A2:1C"
+  driverType: "OXF-AN00"
+  client: "student"
+  os: "Android"
+  driverCode: "3.9.0"
+  is_http: "1"
+
+
+获取口语家教同步主页列表:
+  - id: 1
+    test_case_info:
+      title: "获取口语家教同步主页列表数据成功"
+      content: "获取口语家教同步主页列表数据成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/spokenindex"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: 2660613
+        uid_replace: 0
+        uid: 2660613
+        book_id: "" #首次进入为""
+        unit_id: ""  #首次进入为""
+        type: "article"
+#        choose_default: "false" #true false 为了在课文下线情况下，依然能取到数据
+    expected:
+      status: 0
+
+获取口语家教拓展主页列表:
+  - id: 1
+    test_case_info:
+      title: "获取口语家教拓展主页列表数据成功"
+      content: "获取口语家教拓展主页列表数据成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/index"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: 2660613
+        uid_replace: 0
+        uid: 2660613
+        book_id: "" #首次进入为空
+    expected:
+      status: 0
+
+获取首页配音列表:
+  - id: 1
+    test_case_info:
+      title: "获取首页配音列表数据成功"
+      content: "获取首页配音列表数据成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/peiyinindex"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: 2660613
+        uid_replace: 0
+        uid: 2660613
+        book_id: "37"
+        unit_id: "50600"
+    expected:
+      data:
+        book_id: "37"
+        unit_id: "50600"
+      status: 0
+
+获取同步教材:
+  - id: 1
+    test_case_info:
+      title: "获取同步教材数据成功"
+      content: "获取同步教材数据成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/getbook"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: 2660613
+        uid_replace: 0
+        uid: 2660613
+        stage_id: "6"
+    expected:
+      status: 0
+
+获取教材单元列表:
+  - id: 1
+    test_case_info:
+      title: "获取教材单元列表成功"
+      content: "获取教材单元列表成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/getunitlist"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: 2660613
+        uid_replace: 0
+        uid: 2660613
+        book_id: "37"
+    expected:
+#      data:
+#        -
+#          period: "1" #学段信息 1-小学 6-初中 10-高中
+#          book_id: "37"
+#          book_title: "鲁教版 六年级上册"
+#          unit_id: "50608"
+#          unit_name: "Unit 9  Do you like bananas?"
+      status: 0
+
+获取同步朗读内容:
+  - id: 1
+    test_case_info:
+      title: "获取同步朗读内容成功"
+      content: "获取同步朗读内容成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/getcnt"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: 2660613
+        uid_replace: 0
+        uid: 2660613
+        book_id: "37"
+        unit_id: "50601"
+        chapter_id: "1944527"
+        biz: "003"
+    expected:
+      status: 0
+
+获取首页配音查看更多列表:
+  - id: 1
+    test_case_info:
+      title: "获取首页趣味配音查看更多列表成功"
+      content: "获取首页趣味配音查看更多列表成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/getvideolist"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: 2660613
+        uid_replace: 0
+        uid: 2660613
+        book_id: "37"
+        unit_id: "50600"
+        page: "0"
+    expected:
+      data:
+        book_id: "37"
+        unit_id: "50600"
+        page: "1"
+      status: 0
+
+获取首页配音专辑列表:
+  - id: 1
+    test_case_info:
+      title: "获取首页配音专辑列表成功"
+      content: "获取首页配音专辑列表成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/albumlist"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: 2660613
+        uid_replace: 0
+        uid: 2660613
+        xueduan: "2" #1代表小学，2代表初中，3代表高中
+#        method: "0"  #请求方式，0代表请求历史（即，上次请求的结果），1代表换一批，默认为0
+    expected:
+#      data:
+#        -
+#          "id":"1",
+#          "name":"Mr. Peabody & Sherman 天才眼镜狗",
+#          "img_url":""
+#          "readNum": "17889"
+      status: 0
+
+获取音标专练列表:
+  - id: 1
+    test_case_info:
+      title: "获取音标专练列表-元音列表成功"
+      content: "获取音标专练列表-元音列表成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/phoneticindex"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "2660613"
+        uid_replace: 0
+        uid: "2660613"
+        type: "1" #1:元音列表 2.辅音列表
+    expected:
+      status: 0
+  - id: 2
+    test_case_info:
+      title: "获取音标专练列表-辅音列表成功"
+      content: "获取音标专练列表-辅音列表成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/phoneticindex"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "2660613"
+        uid_replace: 0
+        uid: "2660613"
+        type: "2" #1:元音列表 2.辅音列表
+    expected:
+      status: 0
+
+获取拓展教材完成进度:
+  - id: 1
+    test_case_info:
+      title: "获取拓展教材完成进度成功"
+      content: "获取拓展教材完成进度成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/bookprocess"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "2660613"
+        uid_replace: 0
+        uid: "2660613"
+        book_ids: "[\"37\",\"38\"]"
+    expected:
+      status: 0
+
+提交同步读课文内容:
+  - id: 1
+    test_case_info:
+      title: "提交同步读课文内容成功"
+      content: "提交同步读课文内容成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/do"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "2660613"
+        uid_replace: 0
+        uid: "2660613"
+        bookid: "4900"
+        chapterid: "831924"
+        biz: "003"
+        duration: "6"
+        path: "003_831924_7843_82524" #选中教材时的 path
+        answer: "[{\"id\":\"111152\",\"start\":\"0\",\"integrity\":\"100\",\"fluency\":\"68\",\"tone\":\"-1\",\"realText\":\"I have a pencil.\",\"_from\":\"singsound\",\"audio\":\"http:\/\/files.cloud.ssapi.cn:8080\/a105\/11eafd372acf5b62ae1ea10516615f74.mp3\",\"text\":\"I have a pencil.\",\"accuracy\":\"94\",\"duration\":\"1828\",\"stress\":\"-1\",\"score\":\"89\"},{\"id\":\"111153\",\"start\":\"1828\",\"integrity\":\"100\",\"fluency\":\"95\",\"tone\":\"-1\",\"realText\":\"I have a ruler.\",\"_from\":\"singsound\",\"audio\":\"http:\/\/files.cloud.ssapi.cn:8080\/a105\/11eafd372f858ce8ae1ea10516615f74.mp3\",\"text\":\"I have a ruler.\",\"accuracy\":\"89\",\"duration\":\"1593\",\"stress\":\"-1\",\"score\":\"90\"},{\"id\":\"111154\",\"start\":\"3421\",\"integrity\":\"100\",\"fluency\":\"98\",\"tone\":\"-1\",\"realText\":\"I have a book.\",\"_from\":\"singsound\",\"audio\":\"http:\/\/files.cloud.ssapi.cn:8080\/a105\/11eafd3731e44417ae1ea10516615f74.mp3\",\"text\":\"I have a book.\",\"accuracy\":\"92\",\"duration\":\"1593\",\"stress\":\"-1\",\"score\":\"93\"}]"
+        target_id: "0"  #被学生id，非PK 传 0
+#        msg_id: "0" #消息id 非PK 传 0
+        score: "0" #被pk的分数
+    expected:
+      status: 0
+
+获取课文中单词数据:
+  - id: 1
+    test_case_info:
+      title: "获取课文中单词数据成功"
+      content: "获取课文中单词数据成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/hw/getWordsInfo"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "2660613"
+        uid_replace: 0
+        uid: "2660613"
+        words: "schoolbag"
+        section_id: "1074072" #课时id，非必填
+    expected:
+      status: 0
+
+获取趣味配音内容:
+  - id: 1
+    test_case_info:
+      title: "获取趣味配音内容成功"
+      content: "获取趣味配音内容成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/getcnt"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "3811165"
+        uid_replace: 0
+        uid: "3811165"
+        biz: "513"
+        chapter_id: "2000233"
+        unit_id: "513_2000233_0_1"
+    expected:
+      status: 0
+
+获取趣味配音标签题目id信息:
+  - id: 1
+    test_case_info:
+      title: "获取趣味配音标签题目id信息成功"
+      content: "获取趣味配音标签题目id信息成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/peiyinall"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "3811165"
+        uid_replace: 0
+        uid: "3811165"
+    expected:
+      status: 0
+
+获取趣味配音列表信息:
+  - id: 1
+    test_case_info:
+      title: "获取趣味配音列表信息成功"
+      content: "获取趣味配音列表信息成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/peiyinlist"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "3811165"
+        uid_replace: 0
+        uid: "3811165"
+        ids: "[{
+               \"done\": 0,
+               \"duration\": \"01:44\",
+               \"grade\": 7,
+               \"id\": \"2010746\",
+               \"isVip\": 1,
+               \"level\": -1,
+               \"name\": \"拉玩具计划\",
+               \"school_period\": 0,
+               \"selected\": 0,
+               \"topic_id\": \"5510\",
+               \"topic_name\": \"\",
+               \"unit_id\": \"513_2010746_0_0\"
+               },
+          {
+            \"done\": 0,
+            \"duration\": \"00:49\",
+            \"grade\": 7,
+            \"id\": \"2010745\",
+            \"isVip\": 1,
+            \"level\": -1,
+            \"name\": \"旧玩具店的相遇\",
+            \"school_period\": 0,
+            \"selected\": 0,
+            \"topic_id\": \"5510\",
+            \"topic_name\": \"\",
+            \"unit_id\": \"513_2010745_0_0\"
+          }]"
+    expected:
+      status: 0
+
+获取趣味配音预览信息:
+  - id: 1
+    test_case_info:
+      title: "获取趣味配音预览信息成功"
+      content: "获取趣味配音预览信息成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/preview"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "3811165"
+        uid_replace: 0
+        uid: "3811165"
+        unit_id: "513_2000235_0_1"
+        article_id: "2000235"
+    expected:
+      status: 0
+
+获取他人配音详情信息:
+  - id: 1
+    test_case_info:
+      title: "获取他人配音详情信息成功"
+      content: "获取他人配音详情信息成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/getothernew"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "3811165"
+        uid_replace: 0
+        uid: "3811165"
+        users_uid: "2660612"
+    expected:
+      status: 0
+
+口语家教分享:
+  - id: 1
+    test_case_info:
+      title: "趣味配音分享成功"
+      content: "趣味配音分享成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/share"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "3811165"
+        uid_replace: 0
+        uid: "3811165"
+        audio_url: "https://ekwing-resource.oss-cn-shanghai.aliyuncs.com//ekwing/202009231930001103481183888099.mp4"
+        type: "dub" #配音：dub 课文：article
+        id: "31031264"
+    expected:
+      status: 0
+
+
+#获取趣味配音所有标签信息:
+#wiki上有，学生app没找到
+#  - id: 1
+#    test_case_info:
+#      title: "获取他人配音详情信息成功"
+#      content: "获取他人配音详情信息成功"
+#    test_case_data:
+#      url: "https://mapi.ekwing.com/student/spoken/getothernew"
+#      method: "post"
+#      headers:
+#        Host: "mapi.ekwing.com"
+#      data:
+#        token_replace: 0
+#        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+#        author_id_replace: 0
+#        author_id: "3811165"
+#        uid_replace: 0
+#        uid: "3811165"
+#    expected:
+#      status: 0

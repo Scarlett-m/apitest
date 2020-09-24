@@ -1,0 +1,28 @@
+获取用户详细信息:
+  - id: 1
+    test_case_info:
+      title: ""
+      content: ""
+    test_case_data:
+      url: ""
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "3811165"
+        uid_replace: 0
+        uid: "3811165"
+      excepted:
+        data:
+          avatar: "https://cdn-resource.ekwing.com//ekwing/202007151436299839141471761551.jpg"
+          birthday: "2019年05月08日"
+        status: 0
+
+  - id: 2
+    test_case_info:
+      title:
+      content:
+    test_case_data:
