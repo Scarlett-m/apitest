@@ -6,7 +6,6 @@ from app2.common.assist import Assist
 from app2.common.urlhandle import UrlHandle
 
 class UserCenter:
-
     """
     执行个人中心的测试用例
     """
@@ -145,6 +144,7 @@ class UserCenter:
             print(response.content)
             json_data = response.json()
             # 遍历用例中的期望值
+            print(data["test_case_data"]["expected"])
             expected_data = data["test_case_data"]["expected"]
             for data in expected_data.keys():
                 if type(expected_data[data]) == type(expected_data):
@@ -345,16 +345,27 @@ class UserCenter:
             json_data = response.json()
             # 遍历用例中的期望值
             expected_data = data["test_case_data"]["expected"]
+            # for data in expected_data.keys():
+            #     if type(expected_data[data]) == type(expected_data):
+            #         for d in expected_data[data].keys():
+            #             try:
+            #                 if expected_data[data][d] == json_data[data][d]:
+            #                     print("test_pass")
+            #                 else:
+            #                     print("test_failed")
+            #             except KeyError:
+            #                 pass
+            #     elif expected_data[data] == json_data[data]:
+            #         print("test_pass")
+            #     else:
+            #         print("test_failed")
             for data in expected_data.keys():
-                if type(expected_data[data]) == type(expected_data):
+                if type(expected_data[data])==type(expected_data):
                     for d in expected_data[data].keys():
-                        try:
-                            if expected_data[data][d] == json_data[data][d]:
-                                print("test_pass")
-                            else:
-                                print("test_failed")
-                        except KeyError:
-                            pass
+                        if expected_data[data][d]==json_data[data][d]:
+                            print("test_pass")
+                        else:
+                            print("test_failed")
                 elif expected_data[data] == json_data[data]:
                     print("test_pass")
                 else:
@@ -489,7 +500,13 @@ class UserCenter:
                 if type(expected_data[data]) == type(expected_data):
                     for d in expected_data[data].keys():
                         try:
-                            if expected_data[data][d] == json_data[data][d]:
+                            if type(expected_data[data][d]) == type(json_data[data][d]):
+                                for m in expected_data[data][d].keys():
+                                    if expected_data[data][d][m] == json_data[data][d][m]:
+                                        print("test_pass")
+                                    else:
+                                        print("test_failed")
+                            elif expected_data[data][d] == json_data[data][d]:
                                 print("test_pass")
                             else:
                                 print("test_failed")
@@ -1225,18 +1242,18 @@ host_dict = {
 }
 
 #线上环境
-obj_usercenter_api = UserCenter(environment="online")
 
+obj_usercenter_api = UserCenter(environment="online")
 #执行获取我的消息未读消息的测试用例
 obj_usercenter_api.get_msgcenter_list_test(username="10279464",password="qwe123")
 #执行获取系统消息列表的测试用例
-obj_usercenter_api.get_msg_list_test(username="10279464",password="qwe123")
+obj_usercenter_api.get_msg_list_test(username="10279464", password="qwe123")
 #执行获取学习消息列表的测试用例
-obj_usercenter_api.get_study_msg_list_test(username="10279464",password="qwe123")
+obj_usercenter_api.get_study_msg_list_test(username="10279128",password="qwe123")
 #执行获取pk消息列表的测试用例
 obj_usercenter_api.get_pk_msg_list_test(username="10279464",password="qwe123")
 #执行获取vip用户权限信息的测试用例
-obj_usercenter_api.get_user_vip_info(username="10279464", password="qwe123")
+obj_usercenter_api.get_user_vip_info(username="10279128", password="qwe123")
 #执行获取非vip用户权限信息的测试用例
 obj_usercenter_api.get_user_nonvip_info(username="10279381", password="a123123")
 #执行获取云会员用户信息的测试用例
@@ -1244,11 +1261,11 @@ obj_usercenter_api.get_user_cloud_info(username="1775900187", password="666666")
 #执行获取班级动态新消息数的测试用例
 obj_usercenter_api.get_class_new_dynamic_num(username="10279464", password="qwe123")
 #执行获取班级动态列表的测试用例
-obj_usercenter_api.get_dynamic_list(username="10279464", password="qwe123")
+obj_usercenter_api.get_dynamic_list(username="10279128", password="qwe123")
 #执行全局点赞的测试用例
 obj_usercenter_api.user_like(username="10279464", password="qwe123")
 #执行获取等级详细信息数的测试用例
-obj_usercenter_api.get_level_conf(username="10279464", password="qwe123")
+obj_usercenter_api.get_level_conf(username="10279128", password="qwe123")
 #执行获取绑定家长信息的测试用例
 #需要使用已绑定家长的学生账号
 obj_usercenter_api.get_bind_list(username="10279464", password="qwe123")
@@ -1256,7 +1273,7 @@ obj_usercenter_api.get_bind_list(username="10279464", password="qwe123")
 obj_usercenter_api.get_class_list(username="10279464", password="qwe123")
 #执行学生输入班级号搜索班级的测试用例
 #输入一个励志学校下的学生账号
-obj_usercenter_api.get_search_class(username="10279464", password="qwe123")
+obj_usercenter_api.get_search_class(username="10279128", password="qwe123")
 #执行获取学生环保值首页的测试用例
 #输入一个C端学生账号
 obj_usercenter_api.get_expand_index(username="10279464", password="qwe123")
@@ -1265,13 +1282,13 @@ obj_usercenter_api.get_expand_index(username="10279464", password="qwe123")
 obj_usercenter_api.get_expand_rank(username="10279464", password="qwe123")
 #执行获取学生环保值证书的测试用例
 #输入一个C端学生账号
-obj_usercenter_api.get_expand_honor(username="10279464", password="qwe123")
+obj_usercenter_api.get_expand_honor(username="10279128", password="qwe123")
 #执行获取学生环保历史的测试用例
 #输入一个C端学生账号
 obj_usercenter_api.get_expand_detail(username="10279464", password="qwe123")
 #执行获取学生环保值模块信息的测试用例
 #输入一个C端学生账号
-obj_usercenter_api.get_expand_module(username="10279464", password="qwe123")
+obj_usercenter_api.get_expand_module(username="10279128", password="qwe123")
 
 
 #线下环境

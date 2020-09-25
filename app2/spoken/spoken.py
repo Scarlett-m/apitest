@@ -1135,13 +1135,13 @@ obj_usercenter_api = Spoken(environment="online")
 #执行获取口语家教同步主页列表数据的测试用例
 obj_usercenter_api.get_spoken_index(username="10279464", password="qwe123")
 #执行获取口语家教拓展主页列表数据的测试用例
-obj_usercenter_api.get_index(username="10279464", password="qwe123")
+obj_usercenter_api.get_index(username="10279128", password="qwe123")
 #执行获取首页配音列表数据的测试用例
 obj_usercenter_api.get_peiyin_index(username="10279464", password="qwe123")
 #执行获取同步教材数据的测试用例
 obj_usercenter_api.get_book_list(username="10279464", password="qwe123")
 #执行获取教材单元列表数据的测试用例
-obj_usercenter_api.get_unit_list(username="10279464", password="qwe123")
+obj_usercenter_api.get_unit_list(username="10279128", password="qwe123")
 #执行获取同步朗读内容的测试用例
 obj_usercenter_api.get_content(username="10279464", password="qwe123")
 #执行获取首页配音查看更多列表数据的测试用例
