@@ -1,0 +1,525 @@
+
+base_variable:
+  # 此处定义每个接口的基础变量
+  v: "3.6"
+  osv: "6.0.1"
+  deviceToken: "B8:37:65:26:BA:1B"
+  driverType: "OPPOR9s"
+  client: "student"
+  os: "Android"
+  driverCode: "3.8.9"
+  is_http: "1"
+
+
+快速登录:
+  - id: 1
+    test_case_info:
+      title: "使用翼课号和密码正常登录"
+      content: "使用正确的翼课号和密码登录成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/login"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+        password: "f379eaf3c831b04de153469d1bec345e"
+        username: "10278456"
+#        is_http: "1"
+      expected:
+        data:
+          userType: "normal"
+        status: 0
+  - id: 2
+    test_case_info:
+      title: "使用翼课号和错误的密码正常登录"
+      content: "使用正确的翼课号和错误密码登录成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/login"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+        password: "f63f4fbc9f8c85d409f2f59f2b9e12d5"
+        username: "10278456"
+#        is_http: "1"
+      expected:
+        data:
+          error_msg: "用户名与密码不匹配，请重新输入"
+          intent: 10009
+        status: 1
+  - id: 3
+    test_case_info:
+      title: "使用空翼课号和密码进行登录"
+      content: "使用空翼课号和密码密码登录成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/login"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+        password: "f63f4fbc9f8c85d409f2f59f2b9e12d5"
+        username: ""
+#        is_http: "1"
+      expected:
+        data:
+          error_msg: "参数错误"
+          intent: 30000
+        status: 1
+  - id: 4
+    test_case_info:
+      title: "使用翼课号和空密码进行登录"
+      content: "使用翼课号和空密码密码登录成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/login"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+        password: ""
+        username: "10278456"
+#        is_http: "1"
+      expected:
+        data:
+          error_msg: "参数错误"
+          intent: 30000
+        status: 1
+  - id: 5
+    test_case_info:
+      title: "使用游客账号登录"
+      content: "使用游客账号登录成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/login"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+        password: "0fe83d037e7969b722f456bcf59b8723"
+        username: "10279447"
+#        is_http: "1"
+      expected:
+        status: 0
+        data:
+          userType: "visitor"
+
+  - id: 6
+    test_case_info:
+      title: "使用体验账号登录"
+      content: "使用体验账号登录成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/login"
+      method: "post"
+      headers:
+          Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+        password: "96e79218965eb72c92a549dd5a330112"
+        username: "10276229"
+#        is_http: "1"
+      expected:
+        status: 0
+        data:
+          userType: "experience"
+# 一下用例为 3.9.0的测试
+#  - id: 7
+#    test_case_info:
+#      title: "当前用户需要展示翼赛引导弹窗"
+#      content: "当前登录的用户需要展示翼赛引导弹窗"
+#    test_case_data:
+#      url: "https://mapi.ekwing.com/student/User/login"
+#      method: "post"
+#      headers: ""
+#      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        password: "96e79218965eb72c92a549dd5a330112"
+#        username: "10276229"
+#        is_http: "1"
+#      expected:
+#        status: 0
+#        data:
+#          userType: "experience"
+#          show_race: "true"
+#
+#  - id: 8
+#    test_case_info:
+#      title: "当前用户不需要展示翼赛引导弹窗"
+#      content: "当前登录的用户不需要展示翼赛引导弹窗"
+#    test_case_data:
+#      url: "https://mapi.ekwing.com/student/User/login"
+#      method: "post"
+#      headers: ""
+#      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        password: "96e79218965eb72c92a549dd5a330112"
+#        username: "10276229"
+#        is_http: "1"
+#      expected:
+#        status: 0
+#        data:
+#          userType: "experience"
+#          show_race: "false"
+
+获取全部地区数据列表:
+  - id: 1
+    test_case_info:
+      title: "获取省份列表"
+      content: "正确获取省份列表"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/user/getarealist"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        is_http: "1"
+      expected:
+        status: 0
+        # data:data里面包含了省市区的信息，不需要再进行其他请求
+
+获取学校列表:
+  - id: 1
+    test_case_info:
+      title: "获取该地区下所有学校的列表"
+      content: "正确所有该地区下获取学校列表"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/user/scgetschool"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        is_http: "1"
+        st_id: 0
+        id: 2404
+      expected:
+        status: 0
+        # data里面包含了这个地区下的所有学校，用户在选择学段的时候，直接从这些学校中进行筛选
+
+搜索学校:
+  - id: 1
+    test_case_info:
+      title: "搜索学校"
+      content: "用户输入存在的学校，返回相关数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/user/searchschool"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6.1"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        is_http: "1"
+        key: "励志学校"
+        page: 0
+      expected:
+        status: 0
+
+
+实名登录:
+  - id: 1
+    test_case_info:
+      title: "用户实名登录成功"
+      content: "用户输入学校 姓名和正确的密码，登录成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/loginschool"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6.1"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        is_http: "1"
+        pwd: "f379eaf3c831b04de153469d1bec345e"
+        schoolName: "励志学校"
+        schoolId: "4638"
+        nicename: "刘十"
+      expected:
+        status: 0
+        data:
+          userType: "normal"
+
+  - id: 2
+    test_case_info:
+      title: "重名登录"
+      content: "用户输入学校 姓名和正确的密码，出现重名登录页面"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/loginschool"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6.1"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        is_http: "1"
+        pwd: "f379eaf3c831b04de153469d1bec345e"
+        schoolName: "励志学校"
+        schoolId: "4638"
+        nicename: "代利利"
+      expected:
+        status: 1
+        data:
+          errlog: "登录重名，请选择您的账号登录"
+          intent: "10001"
+
+  - id: 3
+    test_case_info:
+      title: "用户输入空的姓名登录失败"
+      content: "用户输入学校 空姓名和正确的密码，登录失败"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/loginschool"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6.1"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        is_http: "1"
+        pwd: "f379eaf3c831b04de153469d1bec345e"
+        schoolName: "励志学校"
+        schoolId: "4638"
+        nicename: ""
+      expected:
+        status: 1
+        data:
+          errlog: "参数错误"
+          error_msg: "参数错误"
+          intend: 30000
+          intent: 30000
+
+
+央管扫码登录:
+  - id: 1
+    test_case_info:
+      title: "央管扫码登录"
+      content: "央管扫码登录"
+    test_case_data:
+      url: "http://mapi.ekwing.com/student/User/loginscan"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6.1"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        is_http: "1"
+        # ticket_replace：0代表需要替换  1代表不需要替换
+        ticket_replace: 0
+        # ticket 需要动态获取，这里只是先写一个
+        ticket: "NTIyY2Q0NmQtMDE1YS00NDk1LWFjZDQtNmQwMTVhZTQ5NTZkMTU5NjYxMjQ3ODU0Nw=="
+        sysCode: "0"
+      expected:
+        status: 0
+        data:
+          userType: "normal"
+  - id: 2
+    test_case_info:
+      title: "央管重复扫码登录失败"
+      content: "央管重复扫码登录失败"
+    test_case_data:
+      url: "http://mapi.ekwing.com/student/User/loginscan"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6.1"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        is_http: "1"
+        # ticket_replace：0代表需要替换  1代表不需要替换
+        ticket_replace: 1
+        # ticket 需要动态获取，这里只是先写一个
+        ticket: "NTIyY2Q0NmQtMDE1YS00NDk1LWFjZDQtNmQwMTVhZTQ5NTZkMTU5NjYxMjQ3ODU0Nw=="
+        sysCode: "0"
+      expected:
+        status: 1
+        data:
+          errlog: "用户名与密码不匹配，请重新输入"
+          error_msg: "用户名与密码不匹配，请重新输入"
+          intend: 10009
+          intent: 10009
+
+# 等有合适的测试机的时候再测吧
+一键登录:
+  - id: 1
+    test_case_info:
+      title: "手机号一键登录"
+      content: "手机号一键登录"
+    test_case_data:
+      url: "http://mapi.ekwing.com/student/User/loginshanyan"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6.1"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        is_http: "1"
+        # ticket_replace：0代表需要替换  1代表不需要替换
+        ticket_replace: 0
+        # ticket 需要动态获取，这里只是先写一个
+        ticket: "NTIyY2Q0NmQtMDE1YS00NDk1LWFjZDQtNmQwMTVhZTQ5NTZkMTU5NjYxMjQ3ODU0Nw=="
+        sysCode: "0"
+      expected:
+        status: 0
+        data:
+          userType: "normal"
+
+
+退出登录:
+  - id: 1
+    test_case_info:
+      title: "用户退出登录"
+      content: "用户退出登录"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/logout"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6.1"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+        # 0代表替换对应的值  1代表不替换
+        token_replace: 0
+        token: "lODI4OTAjIzEwMjc2MjI5IyNhYTYxMGE0NTA4YTExZmUyZmYyY2EzYzVhMDhhZjM0YiMjNzU3ZTQ3ZWZlMjlhY2Y1MjFkZmI5MjQ1MzkyM2M5NDMjIzE1OTkyMDc1MzcjIzIjIzIjI2Vrd19zdHVkZW50T"
+        author_id_replace: 0
+        author_id: ""
+        uid_replace: 0
+        uid: ""
+        is_http: "1"
+      expected:
+        status: 0
+
+  - id: 1
+    test_case_info:
+      title: "用户退出登录"
+      content: "用户退出登录"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/logout"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6.1"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+        # 0代表替换对应的值  1代表不替换
+        token_replace: 1
+        token: "lODI4OTAjIzEwMjc2MjI5IyNhYTYxMGE0NTA4YTExZmUyZmYyY2EzYzVhMDhhZjM0YiMjNzU3ZTQ3ZWZlMjlhY2Y1MjFkZmI5MjQ1MzkyM2M5NDMjIzE1OTkyMDc1MzcjIzIjIzIjI2Vrd19zdHVkZW50T"
+        author_id_replace: 1
+        author_id: ""
+        uid_replace: 1
+        uid: ""
+        is_http: "1"
+      expected:
+        status: 1
+        data:
+          errlog: "登录失败，请重新登录"
+          error_msg: "登录失败，请重新登录"
+          intend: 10000
+          intent: 10000
+

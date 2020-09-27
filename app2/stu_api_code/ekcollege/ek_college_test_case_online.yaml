@@ -1,0 +1,1019 @@
+base_variable:
+  # 此处定义每个接口的基础变量
+  v: "3.7"
+  osv: "6.0.1"
+  deviceToken: "B8:37:65:26:BA:1B"
+  driverType: "OPPOR9s"
+  client: "student"
+  os: "Android"
+  driverCode: "3.9.0"
+  is_http: "1"
+
+
+用户自学情况:
+  - id: 1
+    test_case_info:
+      title: "用户是否自学"
+      content: "用户翼课学院没有自学过，口语家教也没有自学过"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/doselfstudy"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+#        is_http: "1"
+      expected:
+        status: 0
+        data:
+          ekCollege: '0'
+          spokenHome: '0'
+  - id: 2
+    test_case_info:
+      title: "用户是否自学"
+      content: "用户翼课学院自学过，口语家教没有自学过"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/doselfstudy"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+#        is_http: "1"
+      expected:
+        status: 0
+        data:
+          ekCollege: '1'
+          spokenHome: '0'
+  - id: 3
+    test_case_info:
+      title: "用户是否自学"
+      content: "用户翼课学院自学过，口语家教自学过"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/doselfstudy"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+#        is_http: "1"
+      expected:
+        status: 0
+        data:
+          ekCollege: '1'
+          spokenHome: '1'
+  - id: 4
+    test_case_info:
+      title: "用户是否自学"
+      content: "用户翼课学院没有自学过，口语家教自学过"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/doselfstudy"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+#        is_http: "1"
+      expected:
+        status: 0
+        data:
+          ekCollege: '0'
+          spokenHome: '1'
+
+
+
+翼课学院首页初始数据:
+  - id: 1
+    test_case_info:
+      title: "获取翼课学院首页初始数据"
+      content: "初中生：获取翼课学院首页的初始数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/getcollegeindex"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+#        is_http: "1"
+      expected:
+        data:
+          sign_status: '0'
+          task:
+           - task_des: "单词对对碰中，训练取得一次100分"
+             task_type: "1"
+             task_exp: "5"
+          word_checkPoint:
+           - word_checkPoint_name: '单词对对碰'
+             word_checkPoint_progress: '1'
+             word_checkPoint_total: '30'
+             word_checkPoint_type: '1001'
+           - word_checkPoint_name: '疯狂猜单词'
+             word_checkPoint_progress: '2'
+             word_checkPoint_total: '29'
+             word_checkPoint_type: '1002'
+           - word_checkPoint_name: '连词大作战'
+             word_checkPoint_progress: '0'
+             word_checkPoint_total: '45'
+             word_checkPoint_type: '1003'
+        status: 0
+
+
+
+翼课学院任务列表:
+  - id: 1
+    test_case_info:
+      title: "获取翼课学院任务列表数据"
+      content: "初中生：获取翼课学院首页的任务列表数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/gettasklist"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+#        is_http: "1"
+      expected:
+        status: 0
+        data:
+          dailyTasks:
+            - checkPoint_type: '1001'
+              environment_num: '50'
+              task_des: '单词对对碰中，训练取得一次100分'
+              task_ed: '1'
+              task_exp: '5'
+              task_id: '1'
+              task_progress: ''
+              task_status: '0'
+              task_type: '1'
+          developmentTasks:
+           - checkPoint_type: ""
+             environment_num: "100"
+             task_des: "单词向前冲中，累计完成10次训练"
+             task_ed: '2'
+             task_exp: '10'
+             task_id: '5'
+             task_progress: '4/10'
+             task_status: '0'
+             task_type: '1'
+          sign:
+            sign_day: '0'
+            sign_status: '0'
+            task_id: '15'
+
+https://mapi.ekwing.com/student/college/toh5:
+  - id: 1
+    test_case_info:
+      title: "https://mapi.ekwing.com/student/college/toh5"
+      content: "接口测试，返回的json数据是下一个请求的链接"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/toh5"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: "1001"
+#        is_http: "1"
+      expected:
+        status: 0
+        data:
+          url: 'https://mapi.ekwing.com/student/college/getwordtoll?jstype=1'
+
+
+单词向前冲-修改教材信息:
+  - id: 1
+    test_case_info:
+      title: "单词对对碰发送修改教材的信息"
+      content: "单词对对碰发送修改教材信息"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/rememberbook"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: 1
+        # 高中-人教版 必修四
+        book_id: '4567'
+        product: "student"
+      expected:
+        status: 0
+  - id: 2
+    test_case_info:
+      title: "疯狂猜单词发送修改教材的信息"
+      content: "疯狂猜单词发送修改教材信息"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/rememberbook"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: 2
+        # 高中-人教版 必修四
+        book_id: '4567'
+        product: "student"
+      expected:
+        status: 0
+  - id: 3
+    test_case_info:
+      title: "连词大作战发送修改教材的信息"
+      content: "连词大作战发送修改教材信息"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/rememberbook"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: 3
+        # 高中-人教版 必修四
+        book_id: '4567'
+        product: "student"
+      expected:
+        status: 0
+
+
+
+单词向前冲-关卡列表信息:
+  - id: 1
+    test_case_info:
+      title: "单词对对碰关卡列表信息"
+      content: "正常获取单词对对碰关卡列表信息"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/getwordtoll"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: ""
+        product: "student"
+        jstype: 1
+        showStyle: "data"
+        random: "1599200533683"
+      expected:
+        status: 0
+        data:
+          book: '高中-人教版 必修四'
+          is_visitor: false
+          type: '1'
+  - id: 2
+    test_case_info:
+      title: "疯狂猜单词关卡列表信息"
+      content: "疯狂猜单词关卡列表信息"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/getwordtoll"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: ""
+        product: "student"
+        jstype: 2
+        showStyle: "data"
+        random: "1599200533683"
+      expected:
+        status: 0
+        data:
+          book: '高中-人教版 必修四'
+          is_visitor: false
+          type: '2'
+  - id: 3
+    test_case_info:
+      title: "连词大作战关卡列表信息"
+      content: "连词大作战关卡列表信息"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/getwordtoll"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: ""
+        product: "student"
+        jstype: 3
+        showStyle: "data"
+        random: "1599200533683"
+      expected:
+        status: 0
+        data:
+          book: '高中-人教版 必修四'
+          is_visitor: false
+          type: '3'
+
+
+单词向前冲给-提交结果:
+  - id: 1
+    test_case_info:
+      title: "单词对对碰提交结果"
+      content: "闯关失败 成绩为30分"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/dotoll"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: "1"
+        product: "student"
+        data: '{"641555":"T","641556":"F","641557":"T","641558":"T","641559":"F","641561":"F","641562":"F","641563":"F","641564":"F","641565":"F"}'
+        start: "1599204924.1442"
+        book_id: "4567"
+        duration: '50000'
+        toll_id: '14761'
+      expected:
+        status: 0
+        data:
+          duration: ''
+          ek_bean: '0'
+          environment_num: '0'
+          exp: '0'
+#          pass_id: 54579074
+          status: 'fail'
+          toll_id: '14761'
+          type: '1'
+  - id: 2
+    test_case_info:
+      title: "疯狂猜单词提交结果"
+      content: "闯关成功 成绩为90分"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/dotoll"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: "2"
+        product: "student"
+        data: '{"641576":"T","641577":"T","641578":"T","641579":"T","641580":"T","641581":"T","641582":"T","641583":"F","641584":"T","641585":"T"}'
+        start: "1599204924.1442"
+        book_id: "4567"
+        duration: '50000'
+        toll_id: '14768'
+      expected:
+        status: 0
+        data:
+          duration: ''
+          ek_bean: '0'
+          environment_num: '20'
+          exp: '3'
+#          pass_id: 54579074
+          status: 'success'
+          toll_id: '14768'
+          type: '2'
+  - id: 3
+    test_case_info:
+      title: "连词大作战提交结果"
+      content: "闯关失败 成绩为0分"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/dotoll"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: "3"
+        product: "student"
+        data: '{"641555":"F","641556":"F","641557":"F","641558":"F","641559":"F","641561":"F","641562":"F","641563":"F","641564":"F","641565":"F"}'
+        start: "1599204924.1442"
+        book_id: "4567"
+        duration: '50000'
+        toll_id: '14763'
+      expected:
+        status: 0
+        data:
+          duration: ''
+          ek_bean: '0'
+          environment_num: '0'
+          exp: '0'
+#          pass_id: 54579074
+          status: 'fail'
+          toll_id: '14763'
+          type: '3'
+
+
+专项练一练-关卡列表:
+  - id: 1
+    test_case_info:
+      title: "获取词汇记忆的关卡列表"
+      content: "正常获取词汇记忆的关卡列表"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/getpointsinfo"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        themeType: "1"
+      expected:
+        status: 0
+        data:
+          themeid: '1'
+  - id: 2
+    test_case_info:
+      title: "获取同步阅读的关卡列表"
+      content: "正常获取同步阅读的关卡列表"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/getpointsinfo"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        themeid: "24"
+        themeType: "3"
+      expected:
+        status: 0
+        data:
+          - themeid: '24'
+  - id: 3
+    test_case_info:
+      title: "获取连词成句的关卡列表"
+      content: "正常获取连词成句的关卡列表"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/getpointsinfo"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        themeid: "3000"
+        themeType: "7"
+      expected:
+        status: 0
+        data:
+          - themeid: '3000'
+
+
+专项练一练-地图列表:
+  - id: 1
+    test_case_info:
+      title: "获取同步阅读的地图列表"
+      content: "正常获取同步阅读的地图列表"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/maplist"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: "3"
+      expected:
+        status: 0
+  - id: 2
+    test_case_info:
+      title: "获取连词成句的地图列表"
+      content: "正常获取连词成句的地图列表"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/maplist"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: "7"
+      expected:
+        status: 0
+
+
+词汇记忆-测验数据:
+  - id: 1
+    test_case_info:
+      title: "获取词汇记忆-指定关卡的题目数据"
+      content: "获取词汇记忆-指定关卡的题目数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/getpointsdata"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        themeid: "1"
+        dataid: "3"
+        compid: "6"
+        levelid: "3"
+        maptype: "1"
+      expected:
+        status: 0
+
+
+词汇记忆-提交测验数据:
+  - id: 1
+    test_case_info:
+      title: "提交词汇记忆-指定关卡的题目数据"
+      content: "提交词汇记忆-指定关卡的题目数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/savepoints"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        answer: '[{"book_content_id":"3","id":"54","text":"黑色（的）","chooses":{"A":{"units_id":"3","id":"52","book_content_id":"3","text":"green"},"D":{"units_id":"3","id":"49","book_content_id":"3","text":"color"},"B":{"units_id":"3","id":"55","book_content_id":"3","text":"white"},"C":{"units_id":"3","id":"54","book_content_id":"3","text":"black"}},"select":"52","units_id":"3"},{"book_content_id":"3","id":"53","text":"https:\/\/static.ekwing.com\/static\/tk\/word\/audio\/dd99c59baf07d7091c7f2e6598e58422.mp3","chooses":{"A":{"units_id":"3","id":"55","book_content_id":"3","text":"白色（的）"},"D":{"units_id":"3","id":"53","book_content_id":"3","text":"蓝色（的）"},"B":{"units_id":"3","id":"51","book_content_id":"3","text":"黄色（的）"},"C":{"units_id":"3","id":"56","book_content_id":"3","text":"紫色（的）"}},"select":"55","units_id":"3"},{"book_content_id":"3","id":"56","text":"https:\/\/static.ekwing.com\/static\/tk\/word\/audio\/20a326d8b0eb9fdd28740f174fb7f484.mp3","chooses":{"A":{"units_id":"3","id":"56","book_content_id":"3","text":"紫色（的）"},"D":{"units_id":"3","id":"49","book_content_id":"3","text":"（=colour）颜色"},"B":{"units_id":"3","id":"51","book_content_id":"3","text":"黄色（的）"},"C":{"units_id":"3","id":"53","book_content_id":"3","text":"蓝色（的）"}},"select":"56","units_id":"3"},{"book_content_id":"3","id":"57","text":"brown","chooses":{"A":{"units_id":"3","id":"57","book_content_id":"3","text":"棕色（的）；褐色（的）"},"D":{"units_id":"3","id":"54","book_content_id":"3","text":"黑色（的）"},"B":{"units_id":"3","id":"49","book_content_id":"3","text":"（=colour）颜色"},"C":{"units_id":"3","id":"52","book_content_id":"3","text":"绿色（的）"}},"select":"49","units_id":"3"},{"book_content_id":"3","id":"49","text":"What ____ is it?","chooses":{"A":{"units_id":"3","id":"52","book_content_id":"3","text":"green"},"D":{"units_id":"3","id":"51","book_content_id":"3","text":"yellow"},"B":{"units_id":"3","id":"49","book_content_id":"3","text":"color"},"C":{"units_id":"3","id":"53","book_content_id":"3","text":"blue"}},"select":"52","units_id":"3"},{"book_content_id":"3","id":"51","text":"黄色（的）","chooses":{"A":{"units_id":"3","id":"56","book_content_id":"3","text":"purple"},"D":{"units_id":"3","id":"51","book_content_id":"3","text":"yellow"},"B":{"units_id":"3","id":"52","book_content_id":"3","text":"green"},"C":{"units_id":"3","id":"55","book_content_id":"3","text":"white"}},"select":"56","units_id":"3"},{"book_content_id":"3","id":"52","text":"https:\/\/static.ekwing.com\/static\/tk\/word\/audio\/f8d9b2025fcd5fe16661a08c13d2c0dd.mp3","chooses":{"A":{"units_id":"3","id":"54","book_content_id":"3","text":"黑色（的）"},"D":{"units_id":"3","id":"51","book_content_id":"3","text":"黄色（的）"},"B":{"units_id":"3","id":"52","book_content_id":"3","text":"绿色（的）"},"C":{"units_id":"3","id":"53","book_content_id":"3","text":"蓝色（的）"}},"select":"54","units_id":"3"},{"book_content_id":"3","id":"55","text":"The ____ model plane is hers.","chooses":{"A":{"units_id":"3","id":"55","book_content_id":"3","text":"white"},"D":{"units_id":"3","id":"54","book_content_id":"3","text":"black"},"B":{"units_id":"3","id":"51","book_content_id":"3","text":"yellow"},"C":{"units_id":"3","id":"49","book_content_id":"3","text":"color"}},"select":"55","units_id":"3"}]'
+        compid: "6"
+        dataid: "3"
+        duration: "34"
+        levelid: "3"
+        maptype: '2'
+        method: 'pass'
+        product: 'student'
+        qtype: '3'
+        themeid: '1'
+      expected:
+        status: 0
+        data:
+          environment_num: '0'
+          error: '6'
+
+同步阅读-测验数据:
+  - id: 1
+    test_case_info:
+      title: "获取同步阅读-指定关卡的题目数据"
+      content: "获取同步阅读-指定关卡的题目数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/getcgread"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        compid: '439'
+        dataId: '9559'
+        method: 'pass'
+        product: 'student'
+        qtype: '8'
+      expected:
+        status: 0
+
+同步阅读-提交测验数据:
+  - id: 1
+    test_case_info:
+      title: "提交同步阅读-指定关卡的题目数据"
+      content: "提交同步阅读-指定关卡的题目数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/submitcgread"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        answers: '{"word_num":"188","key_word_num":"5","id":"9559","detail":[{"id":"49234","answer":"A","user_answer":"A"},{"id":"49235","answer":"B","user_answer":"A"},{"id":"49236","answer":"C","user_answer":"A"},{"id":"49237","answer":"C","user_answer":"A"},{"id":"49238","answer":"D","user_answer":"A"}],"units_id":""}'
+        chapterId: '222'
+        compid: '439'
+        dataId: '9559'
+        duration: '37'
+        duration_do: '10'
+        duration_read: '27'
+        evaludate: '1'
+        mapId: '24'
+        mapType: '3'
+        method: 'pass'
+        pause: '0'
+        product: 'student'
+        qtype: '8'
+
+      expected:
+        status: 0
+
+
+连词成句-测验数据:
+  - id: 1
+    test_case_info:
+      title: "获取连词成句-指定关卡的题目数据"
+      content: "获取连词成句-指定关卡的题目数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/gettextbyids"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        chapterContentId: '11000'
+        chapterName: '1'
+        dataId: '8624'
+        method: 'pass'
+        product: 'student'
+        qtype: '11'
+        themeType: '7'
+      expected:
+        status: 0
+
+连词成句-提交测验数据:
+  - id: 1
+    test_case_info:
+      title: "提交连词成句的测验"
+      content: "提交连词成句的数据，得分为6分"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/college/submitWordsentence"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        # 0表示token要被替换
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        answers: '{"isdel":"0","qtype":"11","title":"A Flower in the Desert","hidden":"0","duration":"148.5","realTxt":"","base":{"word_num":"117","units_id":"623","filename":"starter\/01.txt","duration":"99"},"audioTxt":"","tag":"0","translation":"","sentence_num":"18","types":"","is_translation":true,"id":"8624","filename":"starter\/01.txt","acpf_id":"0","units_id":"623","audio":"https:\/\/static.ekwing.com\/static\/tk\/article\/audio\/75f8fb9f79d4040b6f6d165cf710b13b.mp3","role":"","text":"A Flower in the Desert\nA little flower lived in a desert. She was the only flower in the desert. Every day she laughed and enjoyed the sunshine. Sometimes she asked the sun, \"Why was I born in the desert?\" The sun would say, \"The desert is beautiful because of you.\" She was very happy because this was all she wanted to do.\nYears later, the flower became very old. She felt so sad because she would not make the desert beautiful anymore. She cried sadly. Her tears flew away with wind. Suddenly, her tears became thousands of flowers. All of them were laughing and enjoying the sunshine. The desert became much more beautiful because of them.","detail":[{"starts":"2775","isdel":"0","duration":"2328","realTxt":"A Flower in the Desert","record_duration":"3492","realtext":"A Flower in the Desert","ext":"","article_id":"8624","translation":"沙漠之花","sid":"","types":"1","id":"137167","sentence_exp":"","book_content_id":"8624","talk":"A Flower in the Desert","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"A Flower in the Desert ","text":"A Flower in the Desert","role":"","txt":"A Flower in the Desert","start":"2775","orders":"1"},{"starts":"6150","isdel":"0","duration":"2599","realTxt":"A little flower lived in a desert.","record_duration":"3898.5","realtext":"A little flower lived in a desert.","ext":"","article_id":"8624","translation":"沙漠里长着一只小花儿。","sid":"","types":"1","id":"137168","sentence_exp":"","book_content_id":"8624","talk":"A little flower lived in a desert.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"A little flower lived in a desert.","role":"","txt":"A little flower lived in a desert.","start":"6150","orders":"2"},{"starts":"9266","isdel":"0","duration":"2681","realTxt":"She was the only flower in the desert.","record_duration":"4021.5","realtext":"She was the only flower in the desert.","ext":"","article_id":"8624","translation":"她是这片沙漠里唯一的一朵花儿。","sid":"","types":"1","id":"137169","sentence_exp":"","book_content_id":"8624","talk":"She was the only flower in the desert.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"She was the only flower in the desert.","role":"","txt":"She was the only flower in the desert.","start":"9266","orders":"3"},{"starts":"12488","isdel":"0","duration":"3375","realTxt":"Every day she laughed and enjoyed the sunshine.","record_duration":"5062.5","realtext":"Every day she laughed and enjoyed the sunshine.","ext":"","article_id":"8624","translation":"她每天都笑着，享受着阳光。","sid":"","types":"1","id":"137170","sentence_exp":"","book_content_id":"8624","talk":"Every day she laughed and enjoyed the sunshine.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"Every day she laughed and enjoyed the sunshine.","role":"","txt":"Every day she laughed and enjoyed the sunshine.","start":"12488","orders":"4"},{"starts":"16381","isdel":"0","duration":"2387","realTxt":"Sometimes she asked the sun,","record_duration":"3580.5","realtext":"Sometimes she asked the sun,","ext":"","article_id":"8624","translation":"有时候，她会问太阳,","sid":"","types":"1","id":"137171","sentence_exp":"","book_content_id":"8624","talk":"Sometimes she asked the sun,","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"Sometimes she asked the sun,","role":"","txt":"Sometimes she asked the sun,","start":"16381","orders":"5"},{"starts":"19250","isdel":"0","duration":"2458","realTxt":"\"Why was I born in the desert?\"","record_duration":"3687","realtext":"\"Why was I born in the desert?\"","ext":"","article_id":"8624","translation":"“为什么我会长在沙漠里？”","sid":"","types":"1","id":"137172","sentence_exp":"","book_content_id":"8624","talk":"\"Why was I born in the desert?\"","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"\"Why was I born in the desert?\"","role":"","txt":"\"Why was I born in the desert?\"","start":"19250","orders":"6"},{"starts":"22013","isdel":"0","duration":"1635","realTxt":"The sun would say,","record_duration":"2452.5","realtext":"The sun would say,","ext":"","article_id":"8624","translation":"太阳告诉她，","sid":"","types":"1","id":"137173","sentence_exp":"","book_content_id":"8624","talk":"The sun would say,","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"The sun would say,","role":"","txt":"The sun would say,","start":"22013","orders":"7"},{"starts":"24001","isdel":"0","duration":"3351","realTxt":"\"The desert is beautiful because of you.\"","record_duration":"5026.5","realtext":"\"The desert is beautiful because of you.\"","ext":"","article_id":"8624","translation":"“沙漠因你而美丽。”","sid":"","types":"1","id":"137174","sentence_exp":"","book_content_id":"8624","talk":"\"The desert is beautiful because of you.\"","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"\"The desert is beautiful because of you.\"","role":"","txt":"\"The desert is beautiful because of you.\"","start":"24001","orders":"8"},{"starts":"27893","isdel":"0","duration":"4633","realTxt":"She was very happy because this was all she wanted to do.","record_duration":"6949.5","realtext":"She was very happy because this was all she wanted to do.","ext":"","article_id":"8624","translation":"花儿很开心，因为这些都是她想做的。","sid":"","types":"1","id":"137175","sentence_exp":"","book_content_id":"8624","talk":"She was very happy because this was all she wanted to do.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"She was very happy because this was all she wanted to do.","role":"","txt":"She was very happy because this was all she wanted to do.","start":"27893","orders":"9"},{"starts":"34478","isdel":"0","duration":"2341","realTxt":"the flower became very old.","record_duration":"3511.5","realtext":"the flower became very old.","ext":"","article_id":"8624","translation":"花儿衰老了。","sid":"","types":"1","id":"137177","sentence_exp":"","book_content_id":"8624","talk":"the flower became very old.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"the flower became very old.","role":"","txt":"the flower became very old.","start":"34478","orders":"11"},{"starts":"37277","isdel":"0","duration":"5692","realTxt":"She felt so sad because she would not make the desert beautiful anymore.","record_duration":"8538","realtext":"She felt so sad because she would not make the desert beautiful anymore.","ext":"","article_id":"8624","translation":"她感到很伤心，因为沙漠以后都不会因为她而美丽了。","sid":"","types":"1","id":"137178","sentence_exp":"","book_content_id":"8624","talk":"She felt so sad because she would not make the desert beautiful anymore.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"She felt so sad because she would not make the desert beautiful anymore.","role":"","txt":"She felt so sad because she would not make the desert beautiful anymore.","start":"37277","orders":"12"},{"starts":"43322","isdel":"0","duration":"1787","realTxt":"She cried sadly.","record_duration":"2680.5","realtext":"She cried sadly.","ext":"","article_id":"8624","translation":"她伤心地哭了起来。","sid":"","types":"1","id":"137179","sentence_exp":"","book_content_id":"8624","talk":"She cried sadly.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"She cried sadly.","role":"","txt":"She cried sadly.","start":"43322","orders":"13"},{"starts":"45497","isdel":"0","duration":"2740","realTxt":"Her tears flew away with wind.","record_duration":"4110","realtext":"Her tears flew away with wind.","ext":"","article_id":"8624","translation":"泪水随风飘散。","sid":"","types":"1","id":"137180","sentence_exp":"","book_content_id":"8624","talk":"Her tears flew away with wind.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"Her tears flew away with wind.","role":"","txt":"Her tears flew away with wind.","start":"45497","orders":"14"},{"starts":"49930","isdel":"0","duration":"3270","realTxt":"her tears became thousands of flowers.","record_duration":"4905","realtext":"her tears became thousands of flowers.","ext":"","article_id":"8624","translation":"她的眼泪变成了上千朵花儿。","sid":"","types":"1","id":"137182","sentence_exp":"","book_content_id":"8624","talk":"her tears became thousands of flowers.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"her tears became thousands of flowers.","role":"","txt":"her tears became thousands of flowers.","start":"49930","orders":"16"},{"starts":"53741","isdel":"0","duration":"4186","realTxt":"All of them were laughing and enjoying the sunshine.","record_duration":"6279","realtext":"All of them were laughing and enjoying the sunshine.","ext":"","article_id":"8624","translation":"她们都笑着，尽情地享受着阳光。","sid":"","types":"1","id":"137183","sentence_exp":"","book_content_id":"8624","talk":"All of them were laughing and enjoying the sunshine.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"All of them were laughing and enjoying the sunshine.","role":"","txt":"All of them were laughing and enjoying the sunshine.","start":"53741","orders":"17"},{"starts":"58456","isdel":"0","duration":"3175","realTxt":"The desert became much more beautiful because of them.","record_duration":"4762.5","realtext":"The desert became much more beautiful because of them.","ext":"","article_id":"8624","translation":"因为她们的存在，这片沙漠变得更加美丽了。","sid":"","types":"1","id":"137184","sentence_exp":"","book_content_id":"8624","talk":"The desert became much more beautiful because of them.","audio":"75f8fb9f79d4040b6f6d165cf710b13b.mp3","important":"0","units_id":"audio","user_answer":"","text":"The desert became much more beautiful because of them.","role":"","txt":"The desert became much more beautiful because of them.","start":"58456","orders":"18"}],"word_num":"117","content":"A Flower in the Desert\nA little flower lived in a desert. She was the only flower in the desert. Every day she laughed and enjoyed the sunshine. Sometimes she asked the sun, \"Why was I born in the desert?\" The sun would say, \"The desert is beautiful because of you.\" She was very happy because this was all she wanted to do.\nYears later, the flower became very old. She felt so sad because she would not make the desert beautiful anymore. She cried sadly. Her tears flew away with wind. Suddenly, her tears became thousands of flowers. All of them were laughing and enjoying the sunshine. The desert became much more beautiful because of them."}'
+        chapterId: '5000'
+        duration: '63'
+        mapId: '3000'
+        mapType: '7'
+        method: 'pass'
+        pause: '1'
+        product: 'student'
+        qtype: '11'
+        chapterContentId: 11000
+        dataId: '8624'
+      expected:
+        status: 0
+        data:
+          environment_num: '0'
+
