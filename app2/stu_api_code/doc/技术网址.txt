@@ -1,7 +1,0 @@
-查看json：https://www.bejson.com/jsonviewernew/
-
-命名规则：https://www.jb51.net/article/171332.htm
-
-wiki:http://wiki.ekwing.com/doku.php?id=start:ekwing_stu
-
-yaml入门:https://www.runoob.com/w3cnote/yaml-intro.html
