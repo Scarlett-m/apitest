@@ -454,20 +454,20 @@ online_host_dict = {}
 
 obj_brush_api= brush(environment="online",host_dict=online_host_dict)
 
-# obj_brush_api.getIndexInfo_test(username="10278331",password="qwe123")
+obj_brush_api.getIndexInfo_test(username="10278331",password="qwe123")
 #运行智能备考首页测试
 
-# obj_brush_api.getIndexInfo_title_middle_test(username="10278331",password="qwe123")
+obj_brush_api.getIndexInfo_title_middle_test(username="10278331",password="qwe123")
 #运行初中title测试
 
-# obj_brush_api.getIndexInfo_title_high_test(username="78240002",password="a666666")
+obj_brush_api.getIndexInfo_title_high_test(username="78240002",password="a666666")
 #运行高中title测试
 
 
-# obj_brush_api.dobrushsubmit_test(username="78240002",password="a666666")
+obj_brush_api.dobrushsubmit_test(username="78240002",password="a666666")
 #执行智能备考提交测试
 
-# obj_brush_api.createBrush_test(username="10278331",password="qwe123")
+obj_brush_api.createBrush_test(username="10278331",password="qwe123")
 #执行智能备考听说考试刷题测试
 
 
