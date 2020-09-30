@@ -9,7 +9,7 @@ class brush:
 
     def __init__(self,environment,host_dict={}):
         # 读取测试用例
-        self.obj_yaml = OperationYaml("../stu_api_code/brush/brush_test_case_"+environment+".yaml")
+        self.obj_yaml = OperationYaml("../brush/brush_test_case_"+environment+".yaml")
         # 获取测试用例的数据
         self.brush_data = self.obj_yaml.get_yaml_data()
         # 获取发送请求的对象
