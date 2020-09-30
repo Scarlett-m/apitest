@@ -1,9 +1,9 @@
 # coding:utf8
-from app2.common.operationyaml import OperationYaml
-from app2.send_request_package.send_request_moudle import optionRequest
-from app2.common.assist import Assist
+from app2.stu_api_code.common.operationyaml import OperationYaml
+from app2.stu_api_code.send_request_package.send_request_moudle import optionRequest
+from app2.stu_api_code.common.assist import Assist
 import json
-from app2.common.urlhandle import UrlHandle
+from app2.stu_api_code.common.urlhandle import UrlHandle
 
 class brush:
 
@@ -451,25 +451,44 @@ underline_host_dict = {
 
 online_host_dict = {}
 
-
+#以下为执行线上测试的方法
 obj_brush_api= brush(environment="online",host_dict=online_host_dict)
 
-# obj_brush_api.getIndexInfo_test(username="10278331",password="qwe123")
+obj_brush_api.getIndexInfo_test(username="10278331",password="qwe123")
 #运行智能备考首页测试
 
-# obj_brush_api.getIndexInfo_title_middle_test(username="10278331",password="qwe123")
+obj_brush_api.getIndexInfo_title_middle_test(username="10278331",password="qwe123")
 #运行初中title测试
 
-# obj_brush_api.getIndexInfo_title_high_test(username="78240002",password="a666666")
+obj_brush_api.getIndexInfo_title_high_test(username="78240002",password="a666666")
 #运行高中title测试
 
-
-# obj_brush_api.dobrushsubmit_test(username="78240002",password="a666666")
+obj_brush_api.dobrushsubmit_test(username="78240002",password="a666666")
 #执行智能备考提交测试
 
-# obj_brush_api.createBrush_test(username="10278331",password="qwe123")
+obj_brush_api.createBrush_test(username="10278331",password="qwe123")
 #执行智能备考听说考试刷题测试
 
-
 obj_brush_api.getunlist_test(username="10278331",password="qwe123")
+# 执行错题本测试
+
+#以下为执行线下测试调用的方法
+obj_brush_api= brush(environment="underline",host_dict=underline_host_dict)
+
+obj_brush_api.getIndexInfo_test(username="102714367",password="666666")
+#运行智能备考首页测试
+
+obj_brush_api.getIndexInfo_title_middle_test(username="102714367",password="666666")
+#运行初中title测试
+
+obj_brush_api.getIndexInfo_title_high_test(username="78240003",password="666666")
+#运行高中title测试
+
+obj_brush_api.dobrushsubmit_test(username="102714367",password="666666")
+#执行智能备考提交测试
+
+obj_brush_api.createBrush_test(username="102714367",password="666666")
+#执行智能备考听说考试刷题测试
+
+obj_brush_api.getunlist_test(username="102714367",password="666666")
 # 执行错题本测试
