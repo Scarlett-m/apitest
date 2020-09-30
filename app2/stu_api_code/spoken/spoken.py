@@ -1,10 +1,10 @@
 # -*- coding:utf-8 -*-
 #author:Manjusaka
 
-from app2.common.operationyaml import OperationYaml
-from app2.send_request_package.send_request_moudle import optionRequest
-from app2.common.assist import Assist
-from app2.common.urlhandle import UrlHandle
+from app2.stu_api_code.common.operationyaml import OperationYaml
+from app2.stu_api_code.send_request_package.send_request_moudle import optionRequest
+from app2.stu_api_code.common.assist import Assist
+from app2.stu_api_code.common.urlhandle import UrlHandle
 
 class Spoken:
     """
