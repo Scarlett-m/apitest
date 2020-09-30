@@ -1,9 +1,9 @@
 # coding:utf8
-from app2.common.operationyaml import OperationYaml
-from app2.send_request_package.send_request_moudle import optionRequest
-from app2.common.assist import Assist
+from app2.stu_api_code.common.operationyaml import OperationYaml
+from app2.stu_api_code.api_code.send_request_package.send_request_moudle import optionRequest
+from app2.stu_api_code.common.assist import Assist
 import json
-from app2.common.urlhandle import UrlHandle
+from app2.stu_api_code.common.urlhandle import UrlHandle
 
 
 
@@ -316,12 +316,13 @@ class Login:
 
 
 # 现在配置的是线下的host
-host_dict = {
+underline_host_dict = {
     "mapi.ekwing.com":"172.17.20.30"
 }
 
+online_host_dict = {}
 
-obj_login = Login(environment="under_line",host_dict=host_dict)
+obj_login = Login(environment="under_line",host_dict=online_host_dict)
 # obj_login.number_login_test()
 # obj_login.get_arear_test()
 # obj_login.name_login_test()

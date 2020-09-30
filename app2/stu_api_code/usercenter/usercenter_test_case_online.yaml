@@ -33,9 +33,9 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1533110"
+        author_id: "2660613"
         uid_replace: 0
-        uid: "1533110"
+        uid: "2660613"
         time:   #时间戳，首次访问为空
       expected:
 #        data:
@@ -71,15 +71,15 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1533110"
+        author_id: "2660613"
         uid_replace: 0
-        uid: "1533110"
+        uid: "2660613"
         page: 1
         type: 1
-        random: 1600735286810
+        random: "1600735286810"
 #        id: 0  #消息id 首次传0
-    excepted:
-      status: 0
+      expected:
+        status: 0
 
 获取学习消息:
   - id: 1
@@ -95,14 +95,14 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1533110"
+        author_id: "2660613"
         uid_replace: 0
-        uid: "1533110"
+        uid: "2660613"
         page: 1
         type: 1
         random: 1600735286810
-    excepted:
-      status: 0
+      expected:
+        status: 0
 
 获取pk消息:
   - id: 1
@@ -118,13 +118,13 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1533110"
+        author_id: "2660613"
         uid_replace: 0
-        uid: "1533110"
+        uid: "2660613"
         page: 1
         type: "pked"
-    excepted:
-      status: 0
+      expected:
+        status: 0
   - id: 2
     test_case_info:
       title: "获取主动pk消息列表成功"
@@ -138,13 +138,13 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1533110"
+        author_id: "2660613"
         uid_replace: 0
-        uid: "1533110"
+        uid: "2660613"
         page: 1
         type: "pk"
-    excepted:
-      status: 0
+      expected:
+        status: 0
 
 获取vip用户详细信息:
   - id: 1
@@ -160,12 +160,12 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1533110"
+        author_id: "2660613"
         uid_replace: 0
-        uid: "1533110"
-      excepted:
+        uid: "2660613"
+      expected:
         data:
-          vip : true
+          vip : "true"
 #          avatar: "https://cdn-resource.ekwing.com//ekwing/202007151436299839141471761551.jpg"
 #          birthday: "2019年05月08日"
 #          classes: "初一明明班"
@@ -231,12 +231,12 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1556305"
+        author_id: "2660612"
         uid_replace: 0
-        uid: "1556305"
-      excepted:
+        uid: "2660612"
+      expected:
         data:
-          vip : false
+          vip : "false"
         status: 0
 
 获取云会员用户详细信息:
@@ -253,13 +253,13 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "201817032"
+        author_id: "2660613"
         uid_replace: 0
-        uid: "201817032"
-      excepted:
+        uid: "2660613"
+      expected:
         data:
           module:
-            is_cloud: true
+            is_cloud: True
         status: 0
 
 获取班级动态新消息数:
@@ -276,11 +276,11 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1533110"
+        author_id: "2660613"
         uid_replace: 0
-        uid: "1533110"
+        uid: "2660613"
 #        lasttime: ""  #用户上次进入班级动态的时间
-      excepted:
+      expected:
 #        data:
 #          newsNum: "24"
         status: 0
@@ -299,12 +299,12 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1533110"
+        author_id: "3811165"
         uid_replace: 0
-        uid: "1533110"
+        uid: "3811165"
         page: "1"
         type: "1"
-      excepted:
+      expected:
         status: 0
 
 全局点赞:
@@ -321,14 +321,14 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1556305"
+        author_id: "3811165"
         uid_replace: 0
-        uid: "1533110"
-        t_uid: "1533110" #当前这个动态或者课文所属uid
+        uid: "3811165"
+        t_uid: "3811165" #当前这个动态或者课文所属uid
         type: "dynamic"  #口语家教spoken，班级动态dynamic
-        times: "1600829237"
-        id: "3033113239128224"  #该点赞实体的id （ans里面的id）
-      excepted:
+        times: "1600822414"
+        id: "3032998768147701"  #该点赞实体的id （ans里面的id）
+      expected:
         status: 0
 
 获取等级详细信息:
@@ -345,10 +345,10 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1556305"
+        author_id: "2660613"
         uid_replace: 0
-        uid: "1556305"
-      excepted:
+        uid: "2660613"
+      expected:
 #        data:
 #          isRiseLevel : false
 #          riseLevel : "6"
@@ -477,49 +477,49 @@ base_variable:
 
 获取绑定家长信息:
   - id: 1
-      test_case_info:
-        title: "获取绑定家长信息成功"
-        content: "获取绑定家长信息成功"
-      test_case_data:
-        url: "https://mapi.ekwing.com/student/User/getBindList"
-        method: "post"
-        headers:
-          Host: "mapi.ekwing.com"
-        data:
-          token_replace: 0
-          token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
-          author_id_replace: 0
-          author_id: "1556305"
-          uid_replace: 0
-          uid: "1556305"
-        excepted:
-          data:
+    test_case_info:
+      title: "获取绑定家长信息成功"
+      content: "获取绑定家长信息成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/User/getBindList"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "2660613"
+        uid_replace: 0
+        uid: "2660613"
+      expected:
+#          data:
 #            -
 #              bind_time: 1600675399
 #              parent_name: "主家长"
 #              parent_type: "major"
 #              phoneNum: "17778186053"
 #              pid: 2656669
-          status: 0
+        status: 0
 
 获取学生全部班级信息:
   - id: 1
-      test_case_info:
-        title: "获取学生全部班级信息成功"
-        content: "获取学生全部班级信息成功"
-      test_case_data:
-        url: "https://mapi.ekwing.com/student/class/getclasslist"
-        method: "post"
-        headers:
-          Host: "mapi.ekwing.com"
-        data:
-          token_replace: 0
-          token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
-          author_id_replace: 0
-          author_id: "1556305"
-          uid_replace: 0
-          uid: "1556305"
-        excepted:
+    test_case_info:
+      title: "获取学生全部班级信息成功"
+      content: "获取学生全部班级信息成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/class/getclasslist"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "2660613"
+        uid_replace: 0
+        uid: "2660613"
+      expected:
 #          data:
 #            -
 #              #0表示已加入班级 1表示申请中的班级
@@ -528,52 +528,52 @@ base_variable:
 #              isEntity: 1
 #              classId: 47705
 #              className: "初一明明班"
-          status: 0
+        status: 0
 
 学生输入班级号搜索班级:
   - id: 1
-      test_case_info:
-        title: "学生输入班级号搜索班级成功"
-        content: "学生输入班级号搜索班级成功"
-      test_case_data:
-        url: "https://mapi.ekwing.com/student/class/searchclass"
-        method: "post"
-        headers:
-          Host: "mapi.ekwing.com"
-        data:
-          token_replace: 0
-          token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
-          author_id_replace: 0
-          author_id: "1556305"
-          uid_replace: 0
-          uid: "1556305"
-          class_id: 443 #北京翼课网
-        excepted:
-          status: 0
+    test_case_info:
+      title: "学生输入班级号搜索班级成功"
+      content: "学生输入班级号搜索班级成功"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/class/searchclass"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "2660613"
+        uid_replace: 0
+        uid: "2660613"
+        class_id: 443 #北京翼课班新
+      expected:
+        status: 0
   - id: 2
-      test_case_info:
-        title: "学生输入班级号搜索跨校班级"
-        content: "学生输入班级号搜索跨校班级"
-      test_case_data:
-        url: "https://mapi.ekwing.com/student/class/searchclass"
-        method: "post"
-        headers:
-          Host: "mapi.ekwing.com"
+    test_case_info:
+      title: "学生输入班级号搜索跨校班级"
+      content: "学生输入班级号搜索跨校班级"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/class/searchclass"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+        token_replace: 0
+        token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
+        author_id_replace: 0
+        author_id: "2660613"
+        uid_replace: 0
+        uid: "2660613"
+        class_id: 15522
+      expected:
         data:
-          token_replace: 0
-          token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
-          author_id_replace: 0
-          author_id: "1556305"
-          uid_replace: 0
-          uid: "1556305"
-          class_id: 15522
-        excepted:
-          data:
-            intend: 110001
-            intent: 110001
-            errlog: "目前无法跨校申请加入新班级，如有疑问，请联系在线客服哦！"
-            error_msg: "目前无法跨校申请加入新班级，如有疑问，请联系在线客服哦！"
-          status: 1
+          intend: 110001
+          intent: 110001
+          errlog: "目前无法跨校申请加入新班级，如有疑问，请联系在线客服哦！"
+          error_msg: "目前无法跨校申请加入新班级，如有疑问，请联系在线客服哦！"
+        status: 1
 
 学生环保值首页:
   - id: 1
@@ -589,11 +589,11 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1556305"
+        author_id: "2660613"
         uid_replace: 0
-        uid: "1556305"
-    excepted:
-      status: 0
+        uid: "2660613"
+      expected:
+        status: 0
 
 学生环保值排行榜:
   - id: 1
@@ -609,11 +609,11 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1556305"
+        author_id: 2660613
         uid_replace: 0
-        uid: "1556305"
-    excepted:
-      status: 0
+        uid: 2660613
+      expected:
+        status: 0
 
 学生环保值证书:
   - id: 1
@@ -629,11 +629,11 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1556305"
+        author_id: 2660613
         uid_replace: 0
-        uid: "1556305"
-    excepted:
-      status: 0
+        uid: 2660613
+      expected:
+        status: 0
 
 学生环保值历史:
   - id: 1
@@ -649,16 +649,16 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1556305"
+        author_id: 2660613
         uid_replace: 0
-        uid: "1556305"
+        uid: 2660613
         page: 1
-    excepted:
-#      data:
-#        total: 12360
-#        list:
-#          -
-      status: 0
+      expected:
+  #      data:
+  #        total: 12360
+  #        list:
+  #          -
+        status: 0
 
 学生环保值模块信息:
   - id: 1
@@ -674,12 +674,12 @@ base_variable:
         token_replace: 0
         token: "AMjY2MDYxMyMjMTAyNzkzODIjI2IyODM0OTQwNzY0ZWUzNWI4YmI4ZTg2YmU5ZTZmMDZiIyM2MjcwNWZmYmQ1OGI0MTQ3MmZmNmYxMWVlMWJkMzRlYiMjMTU5OTY0NDg3MiMjMiMjMiMjZWt3X3N0dWRlbnQ=0"
         author_id_replace: 0
-        author_id: "1556305"
+        author_id: 2660613
         uid_replace: 0
-        uid: "1556305"
+        uid: 2660613
         page: 1
-    excepted:
-      status: 0
+      expected:
+        status: 0
 
 
 

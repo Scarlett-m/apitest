@@ -1,9 +1,9 @@
 # coding:utf8
-from app2.common.operationyaml import OperationYaml
-from app2.send_request_package.send_request_moudle import optionRequest
-from app2.common.assist import Assist
-import json
-from app2.common.urlhandle import UrlHandle
+from app2.stu_api_code.ekspeaking.ek_speaking import EkSpeaking
+from app2.stu_api_code.common.operationyaml import OperationYaml
+from app2.stu_api_code.send_request_package.send_request_moudle import optionRequest
+from app2.stu_api_code.common.assist import Assist
+from app2.stu_api_code.common.urlhandle import UrlHandle
 
 class OtherApi:
 
@@ -159,6 +159,6 @@ host_dict = {
     "mapi.ekwing.com":"172.17.20.30"
 }
 
-obj_other_api = OtherApi(environment="under_line",host_dict=host_dict)
-# obj_other_api.get_all_config()
-obj_other_api.get_user_info(username="10278314",password="666666")
+# obj_other_api = OtherApi(environment="under_line",host_dict=host_dict)
+# # obj_other_api.get_all_config()
+# obj_other_api.get_user_info(username="10278314",password="666666")

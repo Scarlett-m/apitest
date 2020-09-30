@@ -31,8 +31,8 @@ base_variable:
         unit_id: ""  #首次进入为""
         type: "article"
 #        choose_default: "false" #true false 为了在课文下线情况下，依然能取到数据
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取口语家教拓展主页列表:
   - id: 1
@@ -52,8 +52,8 @@ base_variable:
         uid_replace: 0
         uid: "1533110"
         book_id: "" #首次进入为空
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取首页配音列表:
   - id: 1
@@ -74,11 +74,11 @@ base_variable:
         uid: "1533110"
         book_id: "1"
         unit_id: "1"
-    expected:
-      data:
-        book_id: "1"
-        unit_id: "1"
-      status: 0
+      expected:
+        data:
+          book_id: "1"
+          unit_id: "1"
+        status: 0
 
 获取同步教材:
   - id: 1
@@ -98,8 +98,8 @@ base_variable:
         uid_replace: 0
         uid: "1533110"
         stage_id: "6"
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取教材单元列表:
   - id: 1
@@ -119,7 +119,7 @@ base_variable:
         uid_replace: 0
         uid: "1533110"
         book_id: "1"
-    expected:
+      expected:
 #      data:
 #        -
 #          period: "1" #学段信息 1-小学 6-初中 10-高中
@@ -127,7 +127,7 @@ base_variable:
 #          book_title: "鲁教版 六年级上册"
 #          unit_id: "50608"
 #          unit_name: "Unit 9  Do you like bananas?"
-      status: 0
+        status: 0
 
 获取同步朗读内容:
   - id: 1
@@ -150,8 +150,8 @@ base_variable:
         unit_id: "1"
         chapter_id: "992305"
         biz: "002"
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取首页配音查看更多列表:
   - id: 1
@@ -173,12 +173,12 @@ base_variable:
         book_id: "1"
         unit_id: "1"
         page: "1"
-    expected:
-      data:
-        book_id: "1"
-        unit_id: "1"
-        page: "1"
-      status: 0
+      expected:
+        data:
+          book_id: "1"
+          unit_id: "1"
+          page: "1"
+        status: 0
 
 获取首页配音专辑列表:
   - id: 1
@@ -199,14 +199,14 @@ base_variable:
         uid: "1533110"
         xueduan: "2" #1代表小学，2代表初中，3代表高中
 #        method: "0"  #请求方式，0代表请求历史（即，上次请求的结果），1代表换一批，默认为0
-    expected:
+      expected:
 #      data:
 #        -
 #          "id":"1",
 #          "name":"Mr. Peabody & Sherman 天才眼镜狗",
 #          "img_url":""
 #          "readNum": "17889"
-      status: 0
+        status: 0
 
 获取音标专练列表:
   - id: 1
@@ -226,8 +226,8 @@ base_variable:
         uid_replace: 0
         uid: "2660613"
         type: "1" #1:元音列表 2.辅音列表
-    expected:
-      status: 0
+      expected:
+        status: 0
   - id: 2
     test_case_info:
       title: "获取音标专练列表-辅音列表成功"
@@ -245,8 +245,8 @@ base_variable:
         uid_replace: 0
         uid: "2660613"
         type: "2" #1:元音列表 2.辅音列表
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取拓展教材完成进度:
   - id: 1
@@ -266,8 +266,8 @@ base_variable:
         uid_replace: 0
         uid: "2660613"
         book_ids: "[\"1\",\"2\",\"7\",\"8\",\"13\",\"14\",\"19\",\"20\",\"25\",\"26\",\"31\",\"32\",\"39\",\"40\",\"45\",\"46\",\"3198\",\"3200\",\"3240\",\"3241\",\"5867\",\"5868\",\"5874\",\"5877\",\"6184\",\"6088\",\"6089\",\"6102\",\"6103\",\"6115\",\"6116\",\"6128\",\"6129\",\"6141\",\"6142\",\"6154\",\"6155\",\"6167\",\"6168\",\"6181\",\"6182\"]"
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 提交同步读课文内容:
   - id: 1
@@ -353,8 +353,8 @@ base_variable:
         target_id: "0"  #被学生id，非PK 传 0
 #        msg_id: "0" #消息id 非PK 传 0
         score: "0" #被pk的分数
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取课文中单词数据:
   - id: 1
@@ -375,8 +375,8 @@ base_variable:
         uid: "2660613"
         words: "morning"
         section_id: "1950" #课时id，非必填
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取趣味配音内容:
   - id: 1
@@ -398,8 +398,8 @@ base_variable:
         biz: "513"
         chapter_id: "741040"
         unit_id: "513_741040_0_1"
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取趣味配音标签题目id信息:
   - id: 1
@@ -418,8 +418,8 @@ base_variable:
         author_id: "1533110"
         uid_replace: 0
         uid: "1533110"
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取趣味配音列表信息:
   - id: 1
@@ -466,8 +466,8 @@ base_variable:
             \"topic_name\": \"\",
             \"unit_id\": \"513_1533851_0_0\"
           }]"
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取趣味配音预览信息:
   - id: 1
@@ -488,8 +488,8 @@ base_variable:
         uid: "1533110"
         unit_id: "513_2110896_0_0"
         article_id: "2110896"
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 获取他人配音详情信息:
   - id: 1
@@ -509,8 +509,8 @@ base_variable:
         uid_replace: 0
         uid: "1533110"
         users_uid: "1533113"
-    expected:
-      status: 0
+      expected:
+        status: 0
 
 口语家教分享:
   - id: 1
@@ -532,5 +532,435 @@ base_variable:
         audio_url: "https://ekwing-resource.oss-cn-shanghai.aliyuncs.com//ekwing/20200923200245696141185859157.mp4"
         type: "dub" #配音：dub 课文：article
         id: "20009882"
-    expected:
-      status: 0
+      expected:
+        status: 0
+		
+
+获取url接口:
+  - id: 1
+    test_case_info:
+      title: "获取我的成就的访问url"
+      content: "用户点击我的成就"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/url/get"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: 'achievement'
+#        is_http: "1"
+      expected:
+        status: 0
+        data:
+          url: 'https://mapi.ekwing.com/student/spoken/achieve'
+
+  - id: 2
+    test_case_info:
+      title: "获取我的成就的访问url"
+      content: "用户点击我的成就"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/url/get"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: 'oral_star'
+#        is_http: "1"
+      expected:
+        status: 0
+        data:
+          url: 'https://mapi.ekwing.com/student/spoken/spokenstar'
+
+
+我的成就_列表数据:
+  - id: 1
+    test_case_info:
+      title: "获取我的成就配音列表数据"
+      content: "用户正常获取配音列表数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/spokenselflist"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: 'dub'
+        random: "1600081680023"
+        product: "student"
+        page: "1"
+
+#        is_http: "1"
+      expected:
+        status: 0
+  - id: 2
+    test_case_info:
+      title: "获取我的成就课文列表数据"
+      content: "用户正常获取课文列表数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/spokenselflist"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: 'article'
+        random: "1600081680023"
+        product: "student"
+        page: "1"
+
+#        is_http: "1"
+      expected:
+        status: 0
+  - id: 3
+    test_case_info:
+      title: "获取我的成就单词列表数据"
+      content: "用户正常获取单词列表数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/spokenselflist"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: 'word'
+        random: "1600081680023"
+        product: "student"
+        page: "1"
+
+#        is_http: "1"
+      expected:
+        status: 0
+
+口语之星_周榜:
+  - id: 1
+    test_case_info:
+      title: "获取勤学周榜数据"
+      content: "获取勤学周榜的数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/TopAward"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        product: "student"
+        type: "qx"
+
+#        is_http: "1"
+      expected:
+        status: 0
+  - id: 2
+    test_case_info:
+      title: "获取pk周榜数据"
+      content: "获取pk周榜的数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/TopAward"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        product: "student"
+        type: "pk"
+
+#        is_http: "1"
+      expected:
+        status: 0
+
+
+口语之星_奖励:
+  - id: 1
+    test_case_info:
+      title: "获取奖励数据"
+      content: "获取奖励的数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/spokenpkstar"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        product: "student"
+        random: "1600082325041"
+        ptype: "pk"
+        type: "week"
+
+#        is_http: "1"
+      expected:
+        status: 0
+  - id: 2
+    test_case_info:
+      title: "获取奖励数据"
+      content: "获取奖励的数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/spokenpkstar"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        product: "student"
+        random: "1600082325041"
+        ptype: "pk"
+        type: "total"
+
+#        is_http: "1"
+      expected:
+        status: 0
+
+
+口语之星_总榜:
+  - id: 1
+    test_case_info:
+      title: "获取勤学总榜奖励数据"
+      content: "获取勤学总榜奖励的数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/spokenstar"
+      method: "get"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        product: "student"
+        random: "1600082325041"
+        ptype: "qx"
+        type: "total"
+
+#        is_http: "1"
+      expected:
+        status: 0
+
+
+pk竞技场_获取用户的pk数据:
+  - id: 1
+    test_case_info:
+      title: "获取用户配音pk的数据"
+      content: "正确获取用户pk配音的数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/pkarenas"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: "dub"
+#        is_http: "1"
+      expected:
+        status: 0
+  - id: 2
+    test_case_info:
+      title: "获取用户篇章pk的数据"
+      content: "正确获取用户pk篇章的数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/pkarenas"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: "article"
+#        is_http: "1"
+      expected:
+        status: 0
+  - id: 3
+    test_case_info:
+      title: "获取用户单词pk的数据"
+      content: "正确获取用户pk单词的数据"
+    test_case_data:
+      url: "https://mapi.ekwing.com/student/spoken/pkarenas"
+      method: "post"
+      headers:
+        Host: "mapi.ekwing.com"
+      data:
+#        v: "3.6"
+#        osv: "6.0.1"
+#        deviceToken: "B8:37:65:26:BA:1B"
+#        driverType: "OPPOR9s"
+#        client: "student"
+#        os: "Android"
+#        driverCode: "3.8.9"
+#        当前用户用来的登录名
+        user_number: 10278319
+#       当前用户用来的登录密码
+        password: '666666'
+        token_replace: 0
+        token: ""
+        author_id: ""
+        uid: ""
+        type: "word"
+#        is_http: "1"
+      expected:
+        status: 0
+
+
+
